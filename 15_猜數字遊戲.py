@@ -5,10 +5,17 @@
 #-------本章節----指令教學-------------
 #import random  #(先載入 random 模組)
 #random.randint(1,100) #(使用函式-產生隨機整數)
-#-----------------------------------
+#--------延伸: 讓使用者決定隨機數字的範圍，不用一定要1-100間--------------
+#先讓使用者輸入開始/結束範圍，再將數字讀進random.randint裡
 
 import random
-ace = random.randint(1,100)
+start = input('請決定隨機數字範圍_開始值:')
+end = input('請決定隨機數字範圍_結束值:')
+start = int(start)
+end = int(end)
+
+#ace = random.randint(1,100)
+ace = random.randint(start,end)
 count = 0
 
 while True:
@@ -23,5 +30,6 @@ while True:
 	elif guess_num > ace :
 		print('比答案大')
 print('這是你猜的第',count,'次')
+
 
 
